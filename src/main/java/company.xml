@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean class="springs_hibernate_xml2.dto.Company" id="com">
+		<property name="id" value="103"></property>
+		<property name="name" value="TCS"></property>
+		<property name="location" value="Chennai"></property>
+		<property name="emp">
+			<list>
+				<bean class="springs_hibernate_xml2.dto.Employee" id="e">
+					<property name="id" value="8"></property>
+					<property name="name" value="Omkar"></property>
+					<property name="address" value="Chakan"></property>
+					<property name="phone" value="9875456455"></property>
+				</bean>
+			
+				<bean class="springs_hibernate_xml2.dto.Employee" id="e2">
+					<property name="id" value="9"></property>
+					<property name="name" value="Adesh"></property>
+					<property name="address" value="Kolhapur"></property>
+					<property name="phone" value="7512459870"></property>
+				</bean>
+				<bean class="springs_hibernate_xml2.dto.Employee" id="e3">
+					<property name="id" value="10"></property>
+					<property name="name" value="Krushna"></property>
+					<property name="address" value="Sambhaji Nagar"></property>
+					<property name="phone" value="78947894"></property>
+				</bean>
+				<bean class="springs_hibernate_xml2.dto.Employee" id="e3">
+					<property name="id" value="11"></property>
+					<property name="name" value="Karan"></property>
+					<property name="address" value="Satara"></property>
+					<property name="phone" value="7894123455"></property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	<bean class="springs_hibernate_xml2.dao.CompanyDao" id="dao"></bean>
+
+</beans>
